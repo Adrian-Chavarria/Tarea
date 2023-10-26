@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="JuegoGato">
+  <ClassDiagramComponents>
+    <Class name="CatGame" package="" visibility="public" xPosition="160.0" yPosition="181.0">
+      <Fields>
+        <Field name="board" type="Board" visibility="private"/>
+        <Field name="player" type="Player" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Player" package="" visibility="public" xPosition="454.0" yPosition="332.0">
+      <Fields>
+        <Field name="namePlayer1" type="String" visibility="private"/>
+        <Field name="nameplayer2" type="String" visibility="private"/>
+        <Field name="file" type="File" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="File" package="" visibility="public" xPosition="759.0" yPosition="190.0">
+      <Fields>
+        <Field name="typeFile" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Board" package="" visibility="public" xPosition="454.0" yPosition="48.0">
+      <Fields>
+        <Field name="win" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Player" target="File" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name=" " source="CatGame" target="Board" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="CatGame" target="Player" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="agg" source="Board" target="File" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="CatGame" target="Player" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="CatGame" target="Board" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="Player" target="File" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
